@@ -31,6 +31,7 @@ app.use((req, res) => {
   res.status(404).json('route not found')
 })
 
-app.listen(3000, () => {
-  console.log('servidor levantado en: http://localhost:3000 🚀🚀')
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log(`servidor levantado en: http://localhost:${PORT} 🚀🚀`)
 })
