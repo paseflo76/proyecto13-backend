@@ -1,0 +1,105 @@
+
+//TODO:  Datos de libros en formato CSV
+
+
+title,author,isbn,covers,available,category
+To Kill a Mockingbird,Harper Lee,9780061120084,https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg,true,fiction
+1984,George Orwell,9780451524935,https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg,true,fiction
+Pride and Prejudice,Jane Austen,9780141439518,https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg,true,fiction
+The Great Gatsby,F. Scott Fitzgerald,9780743273565,https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg,true,fiction
+One Hundred Years of Solitude,Gabriel García Márquez,9780060883287,https://covers.openlibrary.org/b/isbn/9780060883287-L.jpg,true,fiction
+A Brief History of Time,Stephen Hawking,9780553380163,https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg,true,science
+The Selfish Gene,Richard Dawkins,9780198788607,https://covers.openlibrary.org/b/isbn/9780198788607-L.jpg,true,science
+Cosmos,Carl Sagan,9780345539434,https://covers.openlibrary.org/b/isbn/9780345539434-L.jpg,true,science
+The Origin of Species,Charles Darwin,9780451529060,https://covers.openlibrary.org/b/isbn/9780451529060-L.jpg,true,science
+Sapiens,Yuval Noah Harari,9780062316097,https://covers.openlibrary.org/b/isbn/9780062316097-L.jpg,true,science
+Guns Germs and Steel,Jared Diamond,9780393317558,https://covers.openlibrary.org/b/isbn/9780393317558-L.jpg,true,history
+The Diary of a Young Girl,Anne Frank,9780553296983,https://covers.openlibrary.org/b/isbn/9780553296983-L.jpg,true,history
+A People's History of the United States,Howard Zinn,9780062397348,https://covers.openlibrary.org/b/isbn/9780062397348-L.jpg,true,history
+The Rise and Fall of the Third Reich,William L. Shirer,9781451651683,https://covers.openlibrary.org/b/isbn/9781451651683-L.jpg,true,history
+SPQR,Mary Beard,9781631492228,https://covers.openlibrary.org/b/isbn/9781631492228-L.jpg,true,history
+Steve Jobs,Walter Isaacson,9781451648539,https://covers.openlibrary.org/b/isbn/9781451648539-L.jpg,true,biography
+The Autobiography of Malcolm X,Malcolm X,9780345350688,https://covers.openlibrary.org/b/isbn/9780345350688-L.jpg,true,biography
+Long Walk to Freedom,Nelson Mandela,9780316548182,https://covers.openlibrary.org/b/isbn/9780316548182-L.jpg,true,biography
+Einstein: His Life and Universe,Walter Isaacson,9780743264747,https://covers.openlibrary.org/b/isbn/9780743264747-L.jpg,true,biography
+Becoming,Michelle Obama,9781524763138,https://covers.openlibrary.org/b/isbn/9781524763138-L.jpg,true,biography
+The Very Hungry Caterpillar,Eric Carle,9780399226908,https://covers.openlibrary.org/b/isbn/9780399226908-L.jpg,true,children
+Where the Wild Things Are,Maurice Sendak,9780060254926,https://covers.openlibrary.org/b/isbn/9780060254926-L.jpg,true,children
+Charlotte's Web,E.B. White,9780064400558,https://covers.openlibrary.org/b/isbn/9780064400558-L.jpg,true,children
+The Cat in the Hat,Dr. Seuss,9780394800011,https://covers.openlibrary.org/b/isbn/9780394800011-L.jpg,true,children
+Goodnight Moon,Margaret Wise Brown,9780064430173,https://covers.openlibrary.org/b/isbn/9780064430173-L.jpg,true,children
+The Hobbit,J.R.R. Tolkien,9780547928227,https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg,true,fantasy
+Harry Potter and the Philosopher's Stone,J.K. Rowling,9780439708180,https://covers.openlibrary.org/b/isbn/9780439708180-L.jpg,true,fantasy
+A Game of Thrones,George R.R. Martin,9780553103540,https://covers.openlibrary.org/b/isbn/9780553103540-L.jpg,true,fantasy
+The Name of the Wind,Patrick Rothfuss,9780756404741,https://covers.openlibrary.org/b/isbn/9780756404741-L.jpg,true,fantasy
+The Chronicles of Narnia,C.S. Lewis,9780066238500,https://covers.openlibrary.org/b/isbn/9780066238500-L.jpg,true,fantasy
+The Girl with the Dragon Tattoo,Stieg Larsson,9780307454546,https://covers.openlibrary.org/b/isbn/9780307454546-L.jpg,true,mystery
+Gone Girl,Gillian Flynn,9780307588371,https://covers.openlibrary.org/b/isbn/9780307588371-L.jpg,true,mystery
+The Da Vinci Code,Dan Brown,9780385504201,https://covers.openlibrary.org/b/isbn/9780385504201-L.jpg,true,mystery
+Murder on the Orient Express,Agatha Christie,9780062693662,https://covers.openlibrary.org/b/isbn/9780062693662-L.jpg,true,mystery
+The Hound of the Baskervilles,Arthur Conan Doyle,9780451528018,https://covers.openlibrary.org/b/isbn/9780451528018-L.jpg,true,mystery
+Outlander,Diana Gabaldon,9780440212560,https://covers.openlibrary.org/b/isbn/9780440212560-L.jpg,true,romance
+The Notebook,Nicholas Sparks,9780446605236,https://covers.openlibrary.org/b/isbn/9780446605236-L.jpg,true,romance
+Pride and Prejudice and Zombies,Seth Grahame-Smith,9781594743344,https://covers.openlibrary.org/b/isbn/9781594743344-L.jpg,true,romance
+Me Before You,Jojo Moyes,9780143124542,https://covers.openlibrary.org/b/isbn/9780143124542-L.jpg,true,romance
+The Bridges of Madison County,Robert James Waller,9780446516549,https://covers.openlibrary.org/b/isbn/9780446516549-L.jpg,true,romance
+Dracula,Bram Stoker,9780141439846,https://covers.openlibrary.org/b/isbn/9780141439846-L.jpg,true,horror
+The Shining,Stephen King,9780307743657,https://covers.openlibrary.org/b/isbn/9780307743657-L.jpg,true,horror
+Frankenstein,Mary Shelley,9780141439471,https://covers.openlibrary.org/b/isbn/9780141439471-L.jpg,true,horror
+It,Stephen King,9781501142970,https://covers.openlibrary.org/b/isbn/9781501142970-L.jpg,true,horror
+The Haunting of Hill House,Shirley Jackson,9780143039983,https://covers.openlibrary.org/b/isbn/9780143039983-L.jpg,true,horror
+The Count of Monte Cristo,Alexandre Dumas,9780140449266,https://covers.openlibrary.org/b/isbn/9780140449266-L.jpg,true,adventure
+Treasure Island,Robert Louis Stevenson,9780141321004,https://covers.openlibrary.org/b/isbn/9780141321004-L.jpg,true,adventure
+Journey to the Center of the Earth,Jules Verne,9780451532152,https://covers.openlibrary.org/b/isbn/9780451532152-L.jpg,true,adventure
+The Call of the Wild,Jack London,9780486264721,https://covers.openlibrary.org/b/isbn/9780486264721-L.jpg,true,adventure
+Life of Pi,Yann Martel,9780156027328,https://covers.openlibrary.org/b/isbn/9780156027328-L.jpg,true,adventure
+The 7 Habits of Highly Effective People,Stephen R. Covey,9781982137274,https://covers.openlibrary.org/b/isbn/9781982137274-L.jpg,true,self-help
+How to Win Friends and Influence People,Dale Carnegie,9780671027032,https://covers.openlibrary.org/b/isbn/9780671027032-L.jpg,true,self-help
+Atomic Habits,James Clear,9780735211292,https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg,true,self-help
+The Power of Now,Eckhart Tolle,9781577314806,https://covers.openlibrary.org/b/isbn/9781577314806-L.jpg,true,self-help
+You Are a Badass,Jen Sincero,9780762447695,https://covers.openlibrary.org/b/isbn/9780762447695-L.jpg,true,self-help
+Meditations,Marcus Aurelius,9780812968255,https://covers.openlibrary.org/b/isbn/9780812968255-L.jpg,true,philosophy
+The Republic,Plato,9780140449143,https://covers.openlibrary.org/b/isbn/9780140449143-L.jpg,true,philosophy
+Being and Time,Martin Heidegger,9780061575594,https://covers.openlibrary.org/b/isbn/9780061575594-L.jpg,true,philosophy
+The Stranger,Albert Camus,9780679720201,https://covers.openlibrary.org/b/isbn/9780679720201-L.jpg,true,philosophy
+Thus Spoke Zarathustra,Friedrich Nietzsche,9780140441185,https://covers.openlibrary.org/b/isbn/9780140441185-L.jpg,true,philosophy
+The Complete Poems,Emily Dickinson,9780316184137,https://covers.openlibrary.org/b/isbn/9780316184137-L.jpg,true,poetry
+Leaves of Grass,Walt Whitman,9780143106388,https://covers.openlibrary.org/b/isbn/9780143106388-L.jpg,true,poetry
+Selected Poems,Pablo Neruda,9780547054430,https://covers.openlibrary.org/b/isbn/9780547054430-L.jpg,true,poetry
+The Waste Land,T.S. Eliot,9780156948616,https://covers.openlibrary.org/b/isbn/9780156948616-L.jpg,true,poetry
+Ariel,Sylvia Plath,9780060732608,https://covers.openlibrary.org/b/isbn/9780060732608-L.jpg,true,poetry
+Into the Wild,Jon Krakauer,9780385486804,https://covers.openlibrary.org/b/isbn/9780385486804-L.jpg,true,travel
+On the Road,Jack Kerouac,9780140283297,https://covers.openlibrary.org/b/isbn/9780140283297-L.jpg,true,travel
+Eat Pray Love,Elizabeth Gilbert,9780143038412,https://covers.openlibrary.org/b/isbn/9780143038412-L.jpg,true,travel
+In Patagonia,Bruce Chatwin,9780140109580,https://covers.openlibrary.org/b/isbn/9780140109580-L.jpg,true,travel
+A Walk in the Woods,Bill Bryson,9780307279460,https://covers.openlibrary.org/b/isbn/9780307279460-L.jpg,true,travel
+The Joy of Cooking,Irma S. Rombauer,9780743246262,https://covers.openlibrary.org/b/isbn/9780743246262-L.jpg,true,cookbook
+Mastering the Art of French Cooking,Julia Child,9780375413407,https://covers.openlibrary.org/b/isbn/9780375413407-L.jpg,true,cookbook
+Salt Fat Acid Heat,Samin Nosrat,9781476753836,https://covers.openlibrary.org/b/isbn/9781476753836-L.jpg,true,cookbook
+The Silver Spoon,Phaidon Press,9780714862453,https://covers.openlibrary.org/b/isbn/9780714862453-L.jpg,true,cookbook
+How to Cook Everything,Mark Bittman,9780764578656,https://covers.openlibrary.org/b/isbn/9780764578656-L.jpg,true,cookbook
+The Story of Art,E.H. Gombrich,9780714832470,https://covers.openlibrary.org/b/isbn/9780714832470-L.jpg,true,art
+Ways of Seeing,John Berger,9780140135152,https://covers.openlibrary.org/b/isbn/9780140135152-L.jpg,true,art
+The Lives of the Artists,Giorgio Vasari,9780199537198,https://covers.openlibrary.org/b/isbn/9780199537198-L.jpg,true,art
+Color and Light,James Gurney,9780740797712,https://covers.openlibrary.org/b/isbn/9780740797712-L.jpg,true,art
+The Art Spirit,Robert Henri,9780465002634,https://covers.openlibrary.org/b/isbn/9780465002634-L.jpg,true,art
+Maus,Art Spiegelman,9780141014081,https://covers.openlibrary.org/b/isbn/9780141014081-L.jpg,true,comic
+The Walking Dead Vol. 1,Robert Kirkman,9781582406190,https://covers.openlibrary.org/b/isbn/9781582406190-L.jpg,true,comic
+Saga Vol. 1,Brian K. Vaughan,9781607066019,https://covers.openlibrary.org/b/isbn/9781607066019-L.jpg,true,comic
+Batman: The Dark Knight Returns,Frank Miller,9781563893421,https://covers.openlibrary.org/b/isbn/9781563893421-L.jpg,true,comic
+Calvin and Hobbes,Bill Watterson,9780836220889,https://covers.openlibrary.org/b/isbn/9780836220889-L.jpg,true,comic
+Watchmen,Alan Moore,9781401238964,https://covers.openlibrary.org/b/isbn/9781401238964-L.jpg,true,graphic-novel
+V for Vendetta,Alan Moore,9781401207922,https://covers.openlibrary.org/b/isbn/9781401207922-L.jpg,true,graphic-novel
+Persepolis,Marjane Satrapi,9780375714573,https://covers.openlibrary.org/b/isbn/9780375714573-L.jpg,true,graphic-novel
+Fun Home,Alison Bechdel,9780618871711,https://covers.openlibrary.org/b/isbn/9780618871711-L.jpg,true,graphic-novel
+Sandman Vol. 1,Neil Gaiman,9781401225759,https://covers.openlibrary.org/b/isbn/9781401225759-L.jpg,true,graphic-novel
+In Cold Blood,Truman Capote,9780679745587,https://covers.openlibrary.org/b/isbn/9780679745587-L.jpg,true,true-crime
+The Devil in the White City,Erik Larson,9780375725609,https://covers.openlibrary.org/b/isbn/9780375725609-L.jpg,true,true-crime
+Helter Skelter,Vincent Bugliosi,9780393322231,https://covers.openlibrary.org/b/isbn/9780393322231-L.jpg,true,true-crime
+I'll Be Gone in the Dark,Michelle McNamara,9780062319784,https://covers.openlibrary.org/b/isbn/9780062319784-L.jpg,true,true-crime
+Mindhunter,John Douglas,9781501190759,https://covers.openlibrary.org/b/isbn/9781501190759-L.jpg,true,true-crime
+The Innovators,Walter Isaacson,9781476708690,https://covers.openlibrary.org/b/isbn/9781476708690-L.jpg,true,technology
+The Soul of A New Machine,Tracy Kidder,9780316491976,https://covers.openlibrary.org/b/isbn/9780316491976-L.jpg,true,technology
+The Code Book,Simon Singh,9780385495325,https://covers.openlibrary.org/b/isbn/9780385495325-L.jpg,true,technology
+Clean Code,Robert C. Martin,9780132350884,https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg,true,technology
+The Phoenix Project,Gene Kim,9780988262508,https://covers.openlibrary.org/b/isbn/9780988262508-L.jpg,true,technology
