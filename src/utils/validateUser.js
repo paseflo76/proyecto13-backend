@@ -1,3 +1,6 @@
+
+//TODO:  Validar datos de usuario para registro
+
 const userRegisterSchema = {
   userName: (value) =>
     typeof value === 'string' && value.length >= 3 && value.length <= 20,

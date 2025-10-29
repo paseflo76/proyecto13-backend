@@ -3,6 +3,8 @@ const bcrypt = require('bcrypt')
 const User = require('../models/Users')
 const { generateSign } = require('../../config/jwt')
 
+
+//TODO:  Obtener todos los usuarios
 const getUsers = async (req, res) => {
   try {
     const users = await User.find()
@@ -11,7 +13,7 @@ const getUsers = async (req, res) => {
     return res.status(400).json(error)
   }
 }
-
+//TODO:  Obtener el perfil del usuario autenticado
 const getMyProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select('-password')
@@ -21,7 +23,7 @@ const getMyProfile = async (req, res) => {
     res.status(500).json({ message: 'Error interno', details: error.message })
   }
 }
-
+//TODO:  Obtener un usuario por ID
 const getUserById = async (req, res) => {
   const { id } = req.params
   if (!id) return res.status(400).json({ message: 'ID de usuario requerido' })
@@ -35,11 +37,11 @@ const getUserById = async (req, res) => {
       .json({ message: 'Error interno', details: error.message })
   }
 }
-
+//TODO:  Registro de usuario
 const register = async (req, res) => {
-  console.log('Body recibido:', req.body) // revisar qué llega del frontend
+  console.log('Body recibido:', req.body) 
   const { valid, errors } = validateRegister(req.body)
-  console.log('Resultado validación:', { valid, errors }) // revisar qué campos fallan
+  console.log('Resultado validación:', { valid, errors }) 
 
   if (!valid)
     return res.status(400).json({ message: 'Datos inválidos', errors })
@@ -65,7 +67,7 @@ const register = async (req, res) => {
     return res.status(400).json({ message: 'Error al registrar usuario' })
   }
 }
-
+//TODO:  Login de usuario
 const login = async (req, res) => {
   const { userName, password } = req.body
   if (!userName || !password)
@@ -90,7 +92,7 @@ const login = async (req, res) => {
     res.status(500).json({ message: 'Error interno', details: error.message })
   }
 }
-
+//TODO:  Actualizar usuario
 const updateUser = async (req, res) => {
   try {
     const { id } = req.params
@@ -128,12 +130,12 @@ const updateUser = async (req, res) => {
     })
   }
 }
-
+//TODO:  Eliminar usuario
 const deleteUser = async (req, res) => {
   try {
     const { id } = req.params
 
-    // El usuario solo puede borrarse a sí mismo, salvo que sea admin
+    //? El usuario solo puede borrarse a sí mismo, salvo que sea admin
     if (req.user.role !== 'admin' && req.user._id.toString() !== id) {
       return res
         .status(403)
