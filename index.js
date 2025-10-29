@@ -13,13 +13,6 @@ const app = express()
 
 app.use(cors())
 
-/* app.use(cors({
-  origin: 'http://localhost:5173', // URL de tu frontend
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-})) */
-
 app.use(express.json())
 
 connectDB()
@@ -28,11 +21,11 @@ app.use('/api/v1/books', BookRouter)
 app.use('/api/v1/users', userRoutes)
 app.use('/api/v1/loans', loanRouter)
 
-app.use(express.static(path.join(__dirname, 'build')))
+app.use(express.static(path.join(__dirname, 'dist')))
 
 app.use((req, res, next) => {
   if (req.path.startsWith('/api/')) return next()
-  res.sendFile(path.join(__dirname, 'build', 'index.html'))
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })
 
 app.use((req, res) => {

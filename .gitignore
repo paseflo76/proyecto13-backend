@@ -3,3 +3,15 @@ node_modules
 .env
 package-lock.json
 
+
+
+
+
+
+// porsi lo necesito 
+/* app.use(cors({
+  origin: 'http://localhost:5173', // URL de tu frontend
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+})) */
