@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
-/* const path = require('path')  */
+const path = require('path')
 const { connectDB } = require('./src/config/db')
 const BookRouter = require('./src/api/routes/Books')
 const userRoutes = require('./src/api/routes/Users')
@@ -28,12 +28,12 @@ app.use('/api/v1/books', BookRouter)
 app.use('/api/v1/users', userRoutes)
 app.use('/api/v1/loans', loanRouter)
 
-/* app.use(express.static(path.join(__dirname, 'build')))
+app.use(express.static(path.join(__dirname, 'build')))
 
 app.use((req, res, next) => {
   if (req.path.startsWith('/api/')) return next()
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
-}) */
+})
 
 app.use((req, res) => {
   res.status(404).json('route not found')
