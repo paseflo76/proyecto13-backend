@@ -1,11 +1,21 @@
 const { deleteFile } = require('../../utils/deletefile')
 const Book = require('../models/Books')
 
-//TODO:  Obtener todos los libros
+//TODO:  Obtener todos los libros con paginación
 const getBooks = async (req, res, next) => {
   try {
+    let { page = 1, limit = 20 } = req.query
+    page = parseInt(page)
+    limit = parseInt(limit)
+
+    const totalBooks = await Book.countDocuments()
+    const totalPages = Math.ceil(totalBooks / limit)
+
     const books = await Book.find()
-    return res.status(200).json(books)
+      .skip((page - 1) * limit)
+      .limit(limit)
+
+    return res.status(200).json({ books, totalPages, currentPage: page })
   } catch (error) {
     return res.status(500).json('Error al obtener los libros')
   }
