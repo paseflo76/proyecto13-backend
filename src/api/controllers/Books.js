@@ -33,15 +33,27 @@ const getBooksById = async (req, res, next) => {
 }
 
 //TODO:  Obtener libros por categoría
+//TODO:  Obtener libros por categoría con paginación
 const getBooksByCategory = async (req, res, next) => {
   try {
     const { category } = req.params
+    let { page = 1, limit = 20 } = req.query
+    page = parseInt(page)
+    limit = parseInt(limit)
+
+    const totalBooks = await Book.countDocuments({ category })
+    const totalPages = Math.ceil(totalBooks / limit)
+
     const books = await Book.find({ category })
-    return res.status(200).json(books)
+      .skip((page - 1) * limit)
+      .limit(limit)
+
+    return res.status(200).json({ books, totalPages, currentPage: page })
   } catch (error) {
     return res.status(500).json('Error al obtener libros por categoría')
   }
 }
+
 //TODO:  Obtener todas las categorías de libros
 const getCategories = (req, res) => {
   try {
