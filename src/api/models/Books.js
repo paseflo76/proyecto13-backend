@@ -20,15 +20,15 @@ const BookSchema = new mongoose.Schema(
         'romance',
         'horror',
         'adventure',
-        'self help',
+        'selfHelp',
         'philosophy',
         'poetry',
         'travel',
         'cookbook',
         'art',
         'comic',
-        'graphic novel',
-        'true crime',
+        'graphicNovel',
+        'trueCcrime',
         'technology'
       ],
       required: true
