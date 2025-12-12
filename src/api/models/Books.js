@@ -28,7 +28,7 @@ const BookSchema = new mongoose.Schema(
         'art',
         'comic',
         'graphicNovel',
-        'trueCcrime',
+        'trueCrime',
         'technology'
       ],
       required: true
