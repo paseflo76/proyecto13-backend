@@ -20,6 +20,32 @@ const getBooks = async (req, res, next) => {
     return res.status(500).json('Error al obtener los libros')
   }
 }
+//TODO:  Búsqueda global de libros con paginación
+const searchBooks = async (req, res) => {
+  try {
+    let { query = '', page = 1, limit = 20 } = req.query
+    page = parseInt(page)
+    limit = parseInt(limit)
+
+    const filter = {
+      $or: [
+        { title: { $regex: query, $options: 'i' } },
+        { author: { $regex: query, $options: 'i' } }
+      ]
+    }
+
+    const totalBooks = await Book.countDocuments(filter)
+    const totalPages = Math.ceil(totalBooks / limit)
+
+    const books = await Book.find(filter)
+      .skip((page - 1) * limit)
+      .limit(limit)
+
+    return res.status(200).json({ books, totalPages, currentPage: page })
+  } catch (error) {
+    return res.status(500).json({ message: 'Error en búsqueda de libros' })
+  }
+}
 
 //TODO:  Obtener un libro por ID
 const getBooksById = async (req, res, next) => {
@@ -32,7 +58,6 @@ const getBooksById = async (req, res, next) => {
   }
 }
 
-//TODO:  Obtener libros por categoría
 //TODO:  Obtener libros por categoría con paginación
 const getBooksByCategory = async (req, res, next) => {
   try {
@@ -167,6 +192,7 @@ const deleteBook = async (req, res, next) => {
 
 module.exports = {
   getBooks,
+  searchBooks,
   getBooksById,
   getBooksByCategory,
   getCategories,

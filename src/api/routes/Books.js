@@ -8,12 +8,15 @@ const {
   putBook,
   deleteBook,
   getBooks,
-  getCategories
+  getCategories,
+  searchBooks
 } = require('../controllers/Books')
 
 const BookRouter = require('express').Router()
 
 BookRouter.get('/', getBooks)
+
+BookRouter.get('/search', searchBooks)
 
 BookRouter.get('/categories', getCategories)
 
