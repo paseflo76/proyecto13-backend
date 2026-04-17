@@ -1,15 +1,33 @@
 const jwt = require('jsonwebtoken')
 
+// Centraliza la validación del secreto
+const getJwtSecret = () => {
+  if (!process.env.JWT_SECRET) {
+    throw new Error('JWT_SECRET no definido')
+  }
+  return process.env.JWT_SECRET
+}
+
 //! Genera token JWT con id y rol
 const generateSign = (id, rol) => {
-  if (!id || !rol) throw new Error('Faltan id o rol para generar token')
-  return jwt.sign({ id, rol }, process.env.JWT_SECRET, { expiresIn: '1y' })
+  if (!id || !rol) {
+    throw new Error('Faltan id o rol para generar token')
+  }
+
+  const secret = getJwtSecret()
+
+  return jwt.sign({ id, rol }, secret, { expiresIn: '1y' })
 }
 
 //! Verifica token JWT
 const verifyJwt = (token) => {
-  if (!token) throw new Error('Token no proporcionado')
-  return jwt.verify(token, process.env.JWT_SECRET)
+  if (!token) {
+    throw new Error('Token no proporcionado')
+  }
+
+  const secret = getJwtSecret()
+
+  return jwt.verify(token, secret)
 }
 
 module.exports = { generateSign, verifyJwt }
