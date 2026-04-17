@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt')
 const User = require('../models/Users')
 const { generateSign } = require('../../config/jwt')
 
-
 //TODO:  Obtener todos los usuarios
 const getUsers = async (req, res) => {
   try {
@@ -39,9 +38,9 @@ const getUserById = async (req, res) => {
 }
 //TODO:  Registro de usuario
 const register = async (req, res) => {
-  console.log('Body recibido:', req.body) 
+  console.log('Body recibido:', req.body)
   const { valid, errors } = validateRegister(req.body)
-  console.log('Resultado validación:', { valid, errors }) 
+  console.log('Resultado validación:', { valid, errors })
 
   if (!valid)
     return res.status(400).json({ message: 'Datos inválidos', errors })
@@ -69,27 +68,42 @@ const register = async (req, res) => {
 }
 //TODO:  Login de usuario
 const login = async (req, res) => {
-  const { userName, password } = req.body
-  if (!userName || !password)
-    return res.status(400).json({ message: 'Faltan campos obligatorios' })
-
   try {
+    console.log('BODY:', req.body)
+
+    const { userName, password } = req.body
+
+    if (!userName || !password) {
+      return res.status(400).json({ message: 'Faltan campos obligatorios' })
+    }
+
     const user = await User.findOne({ userName })
-    if (!user)
+
+    console.log('USER FOUND:', user)
+
+    if (!user) {
       return res
         .status(400)
         .json({ message: 'El usuario o la contraseña son incorrectos' })
+    }
 
     const valid = await bcrypt.compare(password, user.password)
-    if (!valid)
+
+    if (!valid) {
       return res.status(400).json({ message: 'Credenciales incorrectas' })
+    }
 
     const token = generateSign(user._id, user.role)
+
     const { password: _, ...userData } = user._doc
 
-    res.status(200).json({ user: userData, token })
+    return res.status(200).json({ user: userData, token })
   } catch (error) {
-    res.status(500).json({ message: 'Error interno', details: error.message })
+    console.error('LOGIN ERROR:', error) // ← CRÍTICO
+    return res.status(500).json({
+      message: 'Error interno',
+      details: error.message // ← devuelve causa real
+    })
   }
 }
 //TODO:  Actualizar usuario
