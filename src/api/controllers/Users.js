@@ -67,30 +67,29 @@ const register = async (req, res) => {
   }
 }
 //TODO:  Login de usuario
+
 const login = async (req, res) => {
   try {
-    console.log('BODY:', req.body)
+    if (!req.body) {
+      return res.status(400).json({ message: 'Body vacío' })
+    }
 
     const { userName, password } = req.body
 
     if (!userName || !password) {
-      return res.status(400).json({ message: 'Faltan campos obligatorios' })
+      return res.status(400).json({ message: 'Faltan campos' })
     }
 
     const user = await User.findOne({ userName })
 
-    console.log('USER FOUND:', user)
-
     if (!user) {
-      return res
-        .status(400)
-        .json({ message: 'El usuario o la contraseña son incorrectos' })
+      return res.status(400).json({ message: 'Credenciales inválidas' })
     }
 
     const valid = await bcrypt.compare(password, user.password)
 
     if (!valid) {
-      return res.status(400).json({ message: 'Credenciales incorrectas' })
+      return res.status(400).json({ message: 'Credenciales inválidas' })
     }
 
     const token = generateSign(user._id, user.role)
@@ -99,10 +98,12 @@ const login = async (req, res) => {
 
     return res.status(200).json({ user: userData, token })
   } catch (error) {
-    console.error('LOGIN ERROR:', error) // ← CRÍTICO
+    console.error('LOGIN ERROR FULL:', error)
+    console.error('STACK:', error?.stack)
+
     return res.status(500).json({
       message: 'Error interno',
-      details: error.message // ← devuelve causa real
+      details: error.message
     })
   }
 }
